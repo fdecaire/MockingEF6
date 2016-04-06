@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dealeronModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="dealeronModelStoreContainer">
+    <EntitySet Name="account" EntityType="dealeronModel.Store.account" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="accid" />
+    </Key>
+    <Property Name="accid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="pass" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'dealeron.dbo.testtable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+</Schema>
